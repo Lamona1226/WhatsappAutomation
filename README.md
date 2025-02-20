@@ -41,9 +41,12 @@ This is a Python-based automation tool designed to send bulk WhatsApp messages, 
     Track progress in real-time within the GUI.
 
 📜 CSV Format Example
-Phone Number	Message	Media Path
-+1234567890	Hello! How are you?	images/promo.jpg
-+9876543210	Check this video!	videos/demo.mp4
+
+| **Phone Number**  | **Message**           | **Media Path**       |
+|-------------------|----------------------|----------------------|
+| +1234567890      | How are you?          | images/promo.jpg     |
+| +9876543210      | Check this video!     | videos/demo.mp4      |
+
 
 
 📌 Screenshots
