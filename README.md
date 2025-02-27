@@ -1,46 +1,79 @@
 # WhatsApp Bulk Message Sender 🚀
-📌 Overview
 
-This is a Python-based automation tool designed to send bulk WhatsApp messages, including text, images, videos, and documents. It utilizes Selenium WebDriver to interact with WhatsApp Web and features a Tkinter-based GUI for easy usage. The bot also supports message scheduling, resuming interrupted tasks, and real-time progress tracking.
-🎯 Features
+![image](https://github.com/user-attachments/assets/080a43f6-9c46-4600-a880-e1689dc62954)
 
-✅ Send Bulk Messages – Send text, images, videos, and documents to multiple contacts.
-✅ Selenium Web Automation – Automates WhatsApp Web interactions.
-✅ Tkinter GUI – User-friendly interface for easy operation.
-✅ Message Scheduling – Schedule messages to be sent at specific times.
-✅ Resume Tasks – Continue sending messages if interrupted.
-✅ Progress Tracking – Displays real-time status updates.
-🔧 Technologies Used
+A Python-based automation tool to send bulk WhatsApp messages through WhatsApp Web. Supports text, images, videos, documents, scheduling, and resume functionality.
 
-    Python – Main programming language
-    Selenium WebDriver – Automates interactions with WhatsApp Web
-    Tkinter – GUI for easy user interaction
-    Pandas – Manages contact lists in CSV format
-    time & threading – For scheduling and automation
+## 🎯 Features
+- ✅ Send bulk messages with text/media attachments
+- 📅 Message scheduling with specific timing
+- ▶️ Resume interrupted sending tasks
+- 📊 Real-time progress tracking
+- 🖥️ User-friendly Tkinter GUI
+- 📁 CSV contact list management
 
-🚀 Getting Started
-🔹 Prerequisites
+## 🔧 Technologies
+- **Python 3** - Core scripting
+- **Selenium** - Browser automation
+- **Tkinter** - GUI interface
+- **Pandas** - CSV data handling
+- **ChromeDriver** - Browser control
 
-    Install Python 3.x
-    Install the required libraries using:
+## 🚀 Getting Started
 
-    pip install selenium pandas tk
+### Prerequisites
+- Python 3.x
+- Google Chrome installed
+- ChromeDriver matching Chrome version
+- GUI environment (required for browser automation)
 
-    Download the Chrome WebDriver compatible with your browser version.
+### 📥 Linux Installation
 
-🔹 Usage
+#### 1. Install system dependencies
+    sudo apt update && sudo apt install -y python3 python3-pip unzip
 
-    Run the script
+#### 2. Install Google Chrome
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    sudo apt install ./google-chrome-stable_current_amd64.deb
 
-    python whatsapp_bot.py
+#### 3. Install ChromeDriver (automatic version matching)
+    LATEST_CHROME_VERSION=$(google-chrome --version | awk '{print $3}')
+    CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$LATEST_CHROME_VERSION")
+    wget -q https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
+    unzip chromedriver_linux64.zip
+    sudo mv chromedriver /usr/local/bin/
+    sudo chmod +x /usr/local/bin/chromedriver
 
-    Login to WhatsApp Web by scanning the QR code.
-    Upload a contact list (CSV format) with phone numbers and messages.
-    Choose media files (optional) for sending images, videos, or documents.
-    Start the bot to automate message sending.
-    Track progress in real-time within the GUI.
+#### 4. Install Python requirements
+    pip3 install -r requirements.txt
 
-📜 CSV Format Example
+## 🔧Configuration
+
+Ensure Chrome and ChromeDriver versions match:
+
+    google-chrome --version
+    chromedriver --version
+
+
+
+## 📖 Usage
+
+1-Start the application:
+ 
+     python3 whatsapp_bot.py
+
+
+2-Scan WhatsApp Web QR code when prompted
+
+3-Load your CSV contact list
+
+4-Select attachments (optional)
+
+5-Configure sending parameters
+
+6-Start automation and monitor progress
+
+## 📜 CSV Format Example
 
 | **Phone Number**  | **Message**           | **Media Path**       |
 |-------------------|----------------------|----------------------|
@@ -49,21 +82,43 @@ This is a Python-based automation tool designed to send bulk WhatsApp messages, 
 
 
 
-📌 Screenshots
-![image](https://github.com/user-attachments/assets/080a43f6-9c46-4600-a880-e1689dc62954)
 
-⚠️ Important Notes
 
-    This bot is not affiliated with WhatsApp and should be used responsibly.
-    Excessive bulk messaging may result in temporary or permanent bans.
-    Ensure Chrome WebDriver matches your browser version to avoid errors.
 
-🎨 Future Improvements
+## ⚠️ Important Notes
 
-    Multi-threading support to improve performance.
-    AI-powered message personalization for better engagement.
-    Error handling enhancements to manage failed message deliveries.
+  ❗ Not affiliated with WhatsApp - use at your own risk
+        
+  🚫 Avoid excessive message rates to prevent account restrictions
+        
+  💻 Requires active GUI session (won't work in headless servers)
+        
+  🔄 Keep ChromeDriver updated with Chrome browser
+        
+  📲 Maintain internet connection during operation
+        
+### Consider using virtual environment for Python packages:
+    
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
 
-🤝 Contributing
+## 🛠 Future Improvements
 
-Contributions are welcome! Feel free to fork this repository, submit issues, or send a pull request.
+- Multi-threaded message delivery
+
+- AI-based message personalization
+
+- Enhanced error recovery mechanisms
+ 
+- Cross-platform packaging
+
+## 🤝 Contributing
+
+Contributions welcome! Please:
+
+1-Fork the repository
+
+2-Create feature branch
+
+3-Submit pull request
