@@ -31,12 +31,16 @@ A Python-based automation tool to send bulk WhatsApp messages through WhatsApp W
 
 #### 1. Install system dependencies
     sudo apt update && sudo apt install -y python3 python3-pip unzip
+#### 2.clone the repsitrories
 
-#### 2. Install Google Chrome
+        sudo git clone https://github.com/Lamona1226/WhatsappAutomation.git
+
+
+#### 3. Install Google Chrome
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     sudo apt install ./google-chrome-stable_current_amd64.deb
 
-#### 3. Install ChromeDriver (automatic version matching)
+#### 4. Install ChromeDriver (automatic version matching)
     LATEST_CHROME_VERSION=$(google-chrome --version | awk '{print $3}')
     CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$LATEST_CHROME_VERSION")
     wget -q https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
@@ -44,7 +48,7 @@ A Python-based automation tool to send bulk WhatsApp messages through WhatsApp W
     sudo mv chromedriver /usr/local/bin/
     sudo chmod +x /usr/local/bin/chromedriver
 
-#### 4. Install Python requirements
+#### 5. Install Python requirements
     pip3 install -r requirements.txt
 
 ## 🔧Configuration
