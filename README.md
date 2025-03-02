@@ -23,43 +23,37 @@ A Python-based automation tool to send bulk WhatsApp messages through WhatsApp W
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Python 3.x
-- Google Chrome installed
-- ChromeDriver matching Chrome version
-- GUI environment (required for browser automation)
 
-### 📥 Linux Installation
+1. Python 3.x
+Ensure you have Python 3 installed. You can verify by running:
 
-#### 1. Install system dependencies
-    sudo apt update && sudo apt install -y python3 python3-pip unzip
-#### 2.clone the repsitrories
+        python3 --version
+If not installed, use your package manager (e.g., apt, dnf, or yum) to install Python 3.
+2. Pip and Virtual Environment
 
-        sudo git clone https://github.com/Lamona1226/WhatsappAutomation.git
+    sudo apt-get install python3-pip
+    python3 -m pip install --upgrade pip
+Virtual Environment
 
+    python3 -m venv venv
+to activate the Enviroment
 
-#### 3. Install Google Chrome
-    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    sudo apt install ./google-chrome-stable_current_amd64.deb
+    source venv/bin/activate
+3. Google Chrome/Firefox Browser
+Make sure you have either Google Chrome or Firefox installed (depending on your configuration).
 
-#### 4. Install ChromeDriver (automatic version matching)
-    LATEST_CHROME_VERSION=$(google-chrome --version | awk '{print $3}')
-    CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$LATEST_CHROME_VERSION")
-    wget -q https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
-    unzip chromedriver_linux64.zip
-    sudo mv chromedriver /usr/local/bin/
-    sudo chmod +x /usr/local/bin/chromedriver
+### Installing Dependencies
+Clone the repository from GitHub:
 
-#### 5. Install Python requirements
-    pip3 install -r requirements.txt
+       git clone https://github.com/Lamona1226/WhatsappAutomation.git
 
-## 🔧Configuration
+CD repository
 
-Ensure Chrome and ChromeDriver versions match:
+    cd whatsapp_bot.py
 
-    google-chrome --version
-    chromedriver --version
+ Install the required Python packages:
 
-
+    pip install -r requirements.txt
 
 ## 📖 Usage
 
@@ -67,16 +61,13 @@ Ensure Chrome and ChromeDriver versions match:
  
      python3 whatsapp_bot.py
 
+2-click on start messaging 
 
-2-Scan WhatsApp Web QR code when prompted
+3-Select attachments (your excel contact list)
 
-3-Load your CSV contact list
+4-Scan WhatsApp Web QR code when prompted
 
-4-Select attachments (optional)
-
-5-Configure sending parameters
-
-6-Start automation and monitor progress
+5- wait untill screen loading then click ok 
 
 ## 📜 CSV Format Example
 
@@ -84,10 +75,6 @@ Ensure Chrome and ChromeDriver versions match:
 |-------------------|----------------------|----------------------|
 | +1234567890      | How are you?          | images/promo.jpg     |
 | +9876543210      | Check this video!     | videos/demo.mp4      |
-
-
-
-
 
 
 ## ⚠️ Important Notes
@@ -102,11 +89,6 @@ Ensure Chrome and ChromeDriver versions match:
         
   📲 Maintain internet connection during operation
         
-### Consider using virtual environment for Python packages:
-    
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
 
 ## 🛠 Future Improvements
 
