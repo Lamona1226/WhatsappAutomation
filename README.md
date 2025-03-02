@@ -1,6 +1,7 @@
 # WhatsApp Bulk Message Sender 🚀
+![image](https://github.com/user-attachments/assets/35327681-aed7-4d8a-af1d-18cd569a5e6f)
 
-![image](https://github.com/user-attachments/assets/080a43f6-9c46-4600-a880-e1689dc62954)
+
 
 A Python-based automation tool to send bulk WhatsApp messages through WhatsApp Web. Supports text, images, videos, documents, scheduling, and resume functionality.
 
